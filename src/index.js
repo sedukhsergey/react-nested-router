@@ -6,7 +6,12 @@
   If you experience any struggles with this sandbox, please raise an issue
   on github. :)
 */
+import { createRoot } from 'react-dom/client';
 import React from "react";
 import ReactDOM from "react-dom";
 import App from "./App";
-ReactDOM.render(<App />, document.getElementById("root"));
+
+const container = document.getElementById('root');
+const root = createRoot(container)
+root.render(<App tab="home" />);
+// root.render(<App />, document.getElementById("root"));
